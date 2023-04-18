@@ -1,1 +1,36 @@
-<p>list-post works!</p>
+
+<div class="card">
+    <div class="card-header">
+        Lista de posts<hr>
+        <a routerLink="/add-employee" class="btn btn-success"> Agregar Empleado </a>
+        
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Body</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let posts of post; let iControl=index">
+                        <td scope="row">{{posts.id}}</td>
+                        <td scope="row">{{posts.title}}</td>
+                        <td scope="row">{{posts.body}}</td>
+                        <td>
+                            <button  class="btn btn-sm btn-info"> Editar </button> 
+                            <button (click)="deleteEmployee(posts.id, iControl)" class="btn btn-sm btn-danger" >Eliminar</button>
+                           
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
