@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostApiService } from 'src/app/services/post-api.service';
 //import globalTexts
 import  globalTexts  from 'src/app/static/global-text.json';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ListPostComponent implements OnInit {
   post: any;
   constructor(
     private postService: PostApiService,
-
+    
 
   ) { }
   ngOnInit(): void {
@@ -32,7 +33,8 @@ export class ListPostComponent implements OnInit {
       this.postService.getPosts().subscribe(response => {
         this.post = response;
         this.loading = false;
-      });
+      }
+      );
      
       
     },
