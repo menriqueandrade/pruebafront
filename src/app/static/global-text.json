@@ -7,7 +7,15 @@
     "Body": "Cuerpo",
     "Action": "Accion",
     "Delete": "Eliminar",
-    "See_more": "Ver más"
+    "See_more": "Ver más",
+    "Edit_Post": "Editar Post",
+
+    "Edit": "Editar",
+    "Cancel": "Cancelar",
+    "Add_Post" : "Agregar Post",
+    "Add": "Agregar"
+   
+
 
 
 }

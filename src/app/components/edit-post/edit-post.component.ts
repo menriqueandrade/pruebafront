@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostApiService } from 'src/app/services/post-api.service';
-
+import  globalTexts  from 'src/app/static/global-text.json';
 @Component({
   selector: 'app-edit-post',
   templateUrl: './edit-post.component.html',
   styleUrls: ['./edit-post.component.css']
 })
 export class EditPostComponent implements OnInit {
-  
+  globalTexts = globalTexts;
   getID: any;
   formPostEdit: FormGroup;
   constructor(
