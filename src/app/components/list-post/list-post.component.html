@@ -4,9 +4,15 @@
         <h4>
             {{ globalTexts.list_of_posts }}
         </h4>
+
     </div>
     <div class="card-header">
-        <a routerLink="/add-employee" class="btn btn-success"> {{ globalTexts.add_post }}</a>
+        <button class="btn btn-success" (click)="openModal()"> {{ globalTexts.add_post }} </button>
+        <app-modal>
+
+        </app-modal>
+
+
     </div>
     <div *ngIf="loading" class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%">
@@ -22,7 +28,8 @@
 
         <div class="table-responsive">
 
-            <table class="table table-primary">
+         
+            <table class="table">
 
                 <thead>
                     <tr>
@@ -33,30 +40,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let posts of post; let iControl=index"
-                        [hidden]="iControl < startIndex || iControl >= endIndex">
+                    <tr *ngFor="let posts of post | slice: (page-1) * pageSize:(page-1) * pageSize + pageSize; let iControl=index ">
+
 
                         <td scope="row">{{posts.id}}</td>
                         <td scope="row">{{posts.title}}</td>
                         <td scope="row">{{posts.body}}</td>
                         <td>
-
-                            <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar
-                            </button>
-                            <button (click)="deleteEmployee(posts.id, iControl)"
-                                class="btn btn-sm btn-danger">{{ globalTexts.Delete }}</button>
-
+                            <div class="row-cell">
+                                <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar
+                                </button> 
+                                <button (click)="deleteEmployee(posts.id, iControl)" class="btn btn-sm btn-danger">{{
+                                    globalTexts.Delete }}</button>
+                            </div>
                     </tr>
 
                 </tbody>
             </table>
-        </div>
-        <div class="div">
-            <div class="col">
-                <div class="text-center" *ngIf="post?.length > limit">
-                    <button class="btn btn-primary" (click)="showMore()">{{ globalTexts.Action }}</button>
-                </div>
-            </div>
+            <ngb-pagination  class="d-flex justify-content-center" [collectionSize]="post.length" [(page)]="page" [pageSize]="pageSize">
+            </ngb-pagination>
         </div>
 
 

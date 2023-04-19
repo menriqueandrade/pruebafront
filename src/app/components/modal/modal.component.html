@@ -1,0 +1,29 @@
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <app-add-post></app-add-post>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closeModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModalEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <app-edit-post>
+                </app-edit-post>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closeModal2()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
