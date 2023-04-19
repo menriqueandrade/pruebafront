@@ -9,7 +9,8 @@ El objetivo princpial de la app es un crud con buenas practicas
 ![image](https://user-images.githubusercontent.com/56304628/233005636-073170e4-789d-451f-b3b4-09a591ce3b12.png)
 # Contruido con:
   ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
-  
+  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+  Boostrap
   
   
 # Instalacion
@@ -68,6 +69,9 @@ SI EL ESTADO DEL CONSUMO DEL API ES LO CONTRARIO DE 200
 
 # DEPLOY A PROD
 LINK PARA ACCEDER ALA DEMO DEL SITIO WEB : https://pruebatec-hosting.web.app/list-employee
+
+# MANEJO DE FORKS
+![image](https://user-images.githubusercontent.com/56304628/233139415-9c2a810a-3cad-4ff2-8412-72e57485550b.png)
 
 # Pruebanew
 
