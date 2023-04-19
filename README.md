@@ -31,7 +31,7 @@ El objetivo princpial de la app es un crud con buenas practicas
 # Uso
 Consulta de Post
 
-![image](https://user-images.githubusercontent.com/56304628/233005728-82723db4-e7c3-4804-a362-ade3e46d1e8f.png)
+![image](https://user-images.githubusercontent.com/56304628/233136471-5292f324-3e3d-4011-b26c-9acc73bde086.png)
 
 Agregar Post (Se agrega tittle y body)
 
@@ -43,7 +43,7 @@ Editar Post (se obtiene el id y los atributos de ese id)
 
 Eliminar Post
 
-![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/Delet_ncjyuu.png)
+![image](https://user-images.githubusercontent.com/56304628/233136637-b28f7642-f4c3-44ab-8a17-39506f36bd8e.png)
 
 IMPORTANTE LA DOCUMENTACION DE JSONPLACEHOLDER DICE QUE EL RECURSO NO SIRVE PARA GUARDAR NI EDITAR NI ELIMINAR SOLO FALCIFICA LO QUE ENVIA
 POR ESTA RAZON NO SE RENDERIZARA EL GUARDADO EN LA TABLA PRINCIPAL LOS DATOS FALCIFICADOS SE VERAN EN CONSOLA DEBIDO A ESTO PARA SOLUCIONAR ESTO ES RECOMENDABLE USAR JSON SERVER PERO COMO NO SE SOLICITO EN LA PRUEBA NO SE HIZO ACABO.
@@ -52,11 +52,22 @@ POR ESTA RAZON NO SE RENDERIZARA EL GUARDADO EN LA TABLA PRINCIPAL LOS DATOS FAL
 ![image](https://user-images.githubusercontent.com/56304628/232973272-099e2f3a-d85d-4fd1-874c-f4df3ffa3643.png)
 
 # CRUD EN CONSOLAS
-![agregando 201](https://user-images.githubusercontent.com/56304628/232973717-220bf989-e621-4b16-8926-f0cd6ace894f.PNG)
-![Edita id](https://user-images.githubusercontent.com/56304628/232973740-e1dc1a92-2424-44d3-918f-d24d37bd66b2.PNG)
+![image](https://user-images.githubusercontent.com/56304628/233135405-dfc102db-becc-4067-8978-8c418295255a.png)
+![image](https://user-images.githubusercontent.com/56304628/233136004-c96ae7be-9970-4171-bc04-4a86bd27dc60.png)
 # MANEJO DE ERRORES
+SI EL ESTADO DEL CONSUMO DEL API ES LO CONTRARIO DE 200 
 ![manejo err](https://user-images.githubusercontent.com/56304628/232973808-d0b92837-670b-4c27-b5f2-fbf343cc9bba.PNG)
+![image](https://user-images.githubusercontent.com/56304628/233137229-635b6fb9-4412-4bb9-8b4a-d0f599c880ac.png)
+![image](https://user-images.githubusercontent.com/56304628/233137393-6eb4296d-aea9-4633-afc3-eab214ac4845.png)
+![image](https://user-images.githubusercontent.com/56304628/233137554-0c4bd22a-7cc4-4e73-83db-bbe1e8275064.png)
 
+# Mobile Version
+![image](https://user-images.githubusercontent.com/56304628/233137779-8cc1d207-cfa2-43fc-9e8f-785ba68ba1a4.png)
+![image](https://user-images.githubusercontent.com/56304628/233137868-8b64066d-7d6a-4506-b131-4373dac22798.png)
+![image](https://user-images.githubusercontent.com/56304628/233137966-8d7315f3-7be3-41f2-af22-d392955cf232.png)
+
+# DEPLOY A PROD
+LINK PARA ACCEDER ALA DEMO DEL SITIO WEB : https://pruebatec-hosting.web.app/list-employee
 
 # Pruebanew
 
