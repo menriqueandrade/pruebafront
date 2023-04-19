@@ -1,1 +1,65 @@
-<p>list-post works!</p>
+<br>
+<div class="card">
+    <div class="card-header">
+        <h4>
+            {{ globalTexts.list_of_posts }}
+        </h4>
+    </div>
+    <div class="card-header">
+        <a routerLink="/add-employee" class="btn btn-success"> {{ globalTexts.add_post }}</a>
+    </div>
+    <div *ngIf="loading" class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%">
+            <h6>
+                {{ globalTexts.Charging }}
+            </h6>
+
+
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-primary">
+
+                <thead>
+                    <tr>
+                        <th scope="col">{{ globalTexts.Id }}</th>
+                        <th scope="col">{{ globalTexts.Title }}</th>
+                        <th scope="col">{{ globalTexts.Body }}</th>
+                        <th scope="col">{{ globalTexts.Action }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let posts of post; let iControl=index"
+                        [hidden]="iControl < startIndex || iControl >= endIndex">
+
+                        <td scope="row">{{posts.id}}</td>
+                        <td scope="row">{{posts.title}}</td>
+                        <td scope="row">{{posts.body}}</td>
+                        <td>
+
+                            <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar
+                            </button>
+                            <button (click)="deleteEmployee(posts.id, iControl)"
+                                class="btn btn-sm btn-danger">{{ globalTexts.Delete }}</button>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="div">
+            <div class="col">
+                <div class="text-center" *ngIf="post?.length > limit">
+                    <button class="btn btn-primary" (click)="showMore()">{{ globalTexts.Action }}</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
