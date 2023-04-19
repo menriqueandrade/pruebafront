@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '', pathMatch: 'full', redirectTo: 'list-employee',
   },
   {
-    path: '', pathMatch: 'full', component: ListPostComponent,
+    path: 'list-employee', pathMatch: 'full', component: ListPostComponent,
   },
  {
      path: 'edit-employee/:id', component: EditPostComponent

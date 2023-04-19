@@ -21,28 +21,32 @@ export class EditPostComponent implements OnInit {
     this.getID = this.activeRoute.snapshot.paramMap.get('id');
     this.apiService.getPostsIdEdit(this.getID).subscribe(
       response => {
-        // console.log(response);
-        console.log(this.getID);
-        this.formPostEdit.setValue(
-          {
-            //enviar valores obtenidos al form
-            title: response[0]['title'] ,
-            body: response[0]['body'],
+        for (let i = 0; i < response.length; i++) {
+          if (response[i]['id'] == this.getID) {
+            this.formPostEdit.setValue(
+              {
+               
+                title: response[i]['title'] ,
+                body: response[i]['body'],
+              }
+            );
           }
-        );
+        }
       }
     )
+    
     this.formPostEdit = this.form.group({
       //enviar valores obtenidos al form
       title: [''],
       body: [''],
     });
+    console.log(this.formPostEdit.value);
   }
   ngOnInit(): void {
    
   }
   sendDataEdit(): any {
-    console.log(this.getID);
+    // console.log(this.getID);
     console.log(this.formPostEdit.value);
     this.apiService.editEmployee(this.getID, this.formPostEdit.value).subscribe((respuesta => {
       console.log(respuesta)
