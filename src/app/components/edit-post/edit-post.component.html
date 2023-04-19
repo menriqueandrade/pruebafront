@@ -1,19 +1,22 @@
+<br>
 <div class="card">
     <div class="card-header">
-        Editar Empleado
+        <h4>
+            Editar de Post
+        </h4>
     </div>
     <div class="card-body">
         <form  ngNativeValidate [formGroup]="formPostEdit" (ngSubmit)="sendDataEdit()">
             <div class="mb-3">
-                <label for="" class="form-label">Nombre</label>
+                <label for="" class="form-label">Title</label>
                 <input required type="text" class="form-control" formControlName="title" name="" id="" aria-describedby="helpId"
-                    placeholder="Escribe un nombre">
+                    placeholder="Escribe un Titulo">
 
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Correo</label>
+                <label for="" class="form-label">Post</label>
                 <input required type="text" class="form-control" formControlName="body" name="" id="" aria-describedby="emailHelpId"
-                    placeholder="abc@mail.com">
+                    placeholder="Escribe un Body">
 
             </div>
 
@@ -25,6 +28,6 @@
         </form>
     </div>
     <div class="card-footer text-muted">
-        Footer
+        Prueba Tecnica
     </div>
 </div>

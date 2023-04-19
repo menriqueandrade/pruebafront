@@ -1,28 +1,24 @@
-
+<br>
 <div class="card">
     <div class="card-header">
-        
-        
-        
         <h4>
-            Lista de Empleados
+            Lista de Post
         </h4>
-       
     </div>
     <div class="card-header">
-        
-        
-        
-      
-        <a routerLink="/add-employee" class="btn btn-success"> Agregar Empleado </a>
+
+
+
+
+        <a routerLink="/add-employee" class="btn btn-success"> Agregar Post </a>
     </div>
-    
+
     <div class="card-body">
-        
+
         <div class="table-responsive">
-            
+
             <table class="table table-primary">
-                
+
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -32,16 +28,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let posts of post; let iControl=index" [hidden]="iControl < startIndex || iControl >= endIndex">
-                        
+                    <tr *ngFor="let posts of post; let iControl=index"
+                        [hidden]="iControl < startIndex || iControl >= endIndex">
+
                         <td scope="row">{{posts.id}}</td>
                         <td scope="row">{{posts.title}}</td>
                         <td scope="row">{{posts.body}}</td>
                         <td>
-                           
-                            <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar </button> 
-                            <button (click)="deleteEmployee(posts.id, iControl)" class="btn btn-sm btn-danger" >Eliminar</button>
-                           
+
+                            <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar
+                            </button>
+                            <button (click)="deleteEmployee(posts.id, iControl)"
+                                class="btn btn-sm btn-danger">Eliminar</button>
+
                     </tr>
 
                 </tbody>
@@ -52,12 +51,9 @@
                 <div class="text-center" *ngIf="post?.length > limit">
                     <button class="btn btn-primary" (click)="showMore()">Ver más</button>
                 </div>
-                <div class="text-center" *ngIf="post?.length < limit">
-                    <button class="btn btn-primary" (click)="showMore()">Ver menos</button>
-                </div>
             </div>
         </div>
-        
+
 
     </div>
 
