@@ -1,3 +1,63 @@
+
+
+# Prueba técnica desarrollador Angular
+
+¡Bienvenido al sitio web que he creado como parte de mi prueba técnica en Angular! Este sitio utiliza la API de JsonPlaceholder Posts para mostrar una lista de publicaciones y detalles de cada una de ellas.
+
+El objetivo princpial de la app es un crud con buenas practicas
+
+![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681879433/Principal_oajv5u.png)
+# Contruido Con:
+  ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+  
+  
+  
+# Instalacion
+  ¡Es sencillo! simplemente clone el repositorio y abra su editor de código en la carpeta donde se clonó el repositorio.
+  Paso 1: git clone https://github.com/NousCode/platzi-bootstrap.git.
+  
+  
+  
+  Paso 2: npm install.
+  
+  
+  Paso 3: npm start.
+  
+  
+  
+  Disfruta evaluando mi sitio web.
+  
+
+# Uso
+Consulta de Post
+
+![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/1_csextf.png)
+
+Agregar Post (Se agrega tittle y body)
+
+![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/Add_vbwnug.png)
+
+Editar Post (se obtiene el id y los atributos de ese id)
+
+![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/edit_zeevhb.png)
+
+Eliminar Post
+
+![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/Delet_ncjyuu.png)
+
+IMPORTANTE LA DOCUMENTACION DE JSONPLACEHOLDER DICE QUE EL RECURSO NO SIRVE PARA GUARDAR NI EDITAR NI ELIMINAR SOLO FALCIFICA LO QUE ENVIA
+POR ESTA RAZON NO SE RENDERIZARA EL GUARDADO EN LA TABLA PRINCIPAL LOS DATOS FALCIFICADOS SE VERAN EN CONSOLA DEBIDO A ESTO PARA SOLUCIONAR ESTO ES RECOMENDABLE USAR JSON SERVER PERO COMO NO SE SOLICITO EN LA PRUEBA NO SE HIZO ACABO.
+
+
+![image](https://user-images.githubusercontent.com/56304628/232973272-099e2f3a-d85d-4fd1-874c-f4df3ffa3643.png)
+
+# CRUD EN CONSOLAS
+![agregando 201](https://user-images.githubusercontent.com/56304628/232973717-220bf989-e621-4b16-8926-f0cd6ace894f.PNG)
+![Edita id](https://user-images.githubusercontent.com/56304628/232973740-e1dc1a92-2424-44d3-918f-d24d37bd66b2.PNG)
+# MANEJO DE ERRORES
+![manejo err](https://user-images.githubusercontent.com/56304628/232973808-d0b92837-670b-4c27-b5f2-fbf343cc9bba.PNG)
+
+
 # Pruebanew
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
