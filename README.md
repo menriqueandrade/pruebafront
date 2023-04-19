@@ -6,8 +6,8 @@
 
 El objetivo princpial de la app es un crud con buenas practicas
 
-![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681879433/Principal_oajv5u.png)
-# Contruido Con:
+![image](https://user-images.githubusercontent.com/56304628/233005636-073170e4-789d-451f-b3b4-09a591ce3b12.png)
+# Contruido con:
   ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
   
   
@@ -31,11 +31,11 @@ El objetivo princpial de la app es un crud con buenas practicas
 # Uso
 Consulta de Post
 
-![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/1_csextf.png)
+![image](https://user-images.githubusercontent.com/56304628/233005728-82723db4-e7c3-4804-a362-ade3e46d1e8f.png)
 
 Agregar Post (Se agrega tittle y body)
 
-![paltziconf](https://res.cloudinary.com/dwypfa60z/image/upload/v1681880900/Add_vbwnug.png)
+![image](https://user-images.githubusercontent.com/56304628/233005936-c2810c0b-3343-4ea7-b76e-32632216cf99.png)
 
 Editar Post (se obtiene el id y los atributos de ese id)
 
