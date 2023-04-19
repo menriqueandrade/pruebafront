@@ -15,7 +15,7 @@ El objetivo princpial de la app es un crud con buenas practicas
   
 # Instalacion
   ¡Es sencillo! simplemente clone el repositorio y abra su editor de código en la carpeta donde se clonó el repositorio.
-  Paso 1: git clone https://github.com/NousCode/platzi-bootstrap.git.
+  Paso 1: git clone https://github.com/menriqueandrade/pruebafront.
   
   
   
