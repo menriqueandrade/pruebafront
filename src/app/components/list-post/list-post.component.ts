@@ -7,7 +7,7 @@ import { PostApiService } from 'src/app/services/post-api.service';
   styleUrls: ['./list-post.component.css']
 })
 export class ListPostComponent implements OnInit {
-  
+  loading = false;
   limit: number = 10;
   startIndex: number = 0;
   numResults = 10;
@@ -24,13 +24,15 @@ export class ListPostComponent implements OnInit {
 
 
     setTimeout(() => {
+      this.loading = true; 
       this.postService.getPosts().subscribe(response => {
         this.post = response;
+        this.loading = false;
       });
       //bar charge
       
     },
-      500);
+      700);
   }
 
   deleteEmployee(id: any, iControl: any) {

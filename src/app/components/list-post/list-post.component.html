@@ -6,11 +6,16 @@
         </h4>
     </div>
     <div class="card-header">
-
-
-
-
         <a routerLink="/add-employee" class="btn btn-success"> Agregar Post </a>
+    </div>
+    <div *ngIf="loading" class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%">
+            <h6>
+                Cargando....
+            </h6>
+
+
+        </div>
     </div>
 
     <div class="card-body">
