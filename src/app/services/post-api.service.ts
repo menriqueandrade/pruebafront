@@ -15,6 +15,10 @@ export class PostApiService {
     this.banderita = true;
     return this.postHttp.get(this.API)
   }
+  AddEmployeeComponent(dataEmployee: any): Observable<any> {
+    return this.postHttp.post(this.API + "?/=", dataEmployee)
+
+  }
   deleteEmployee(id: any): Observable<any> {
 
     return this.postHttp.get(this.API + "/" + id)

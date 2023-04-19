@@ -6,12 +6,14 @@ import { ListPostComponent } from './components/list-post/list-post.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

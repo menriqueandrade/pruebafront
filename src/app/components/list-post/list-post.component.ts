@@ -7,13 +7,20 @@ import { PostApiService } from 'src/app/services/post-api.service';
   styleUrls: ['./list-post.component.css']
 })
 export class ListPostComponent implements OnInit {
-  post:any;
+  ;
+  limit: number = 10;
+  startIndex: number = 0;
+  numResults = 10;
+  endIndex: number = this.limit;
+  resultsToShow = this.numResults;
+  post: any;
   constructor(
     private postService: PostApiService,
 
 
   ) { }
   ngOnInit(): void {
+
     setTimeout(() => {
       this.postService.getPosts().subscribe(response => {
         console.log(response);
@@ -33,6 +40,10 @@ export class ListPostComponent implements OnInit {
         this.post.splice(iControl, 1)
       });
     }
+  }
+  showMore() {
+    this.startIndex += this.limit;
+    this.endIndex = this.startIndex + this.limit;
   }
 
 }
