@@ -7,7 +7,7 @@ import { PostApiService } from 'src/app/services/post-api.service';
   styleUrls: ['./list-post.component.css']
 })
 export class ListPostComponent implements OnInit {
-  ;
+  
   limit: number = 10;
   startIndex: number = 0;
   numResults = 10;
@@ -20,12 +20,15 @@ export class ListPostComponent implements OnInit {
 
   ) { }
   ngOnInit(): void {
+    
+
 
     setTimeout(() => {
       this.postService.getPosts().subscribe(response => {
-        console.log(response);
         this.post = response;
       });
+      //bar charge
+      
     },
       500);
   }
@@ -36,7 +39,7 @@ export class ListPostComponent implements OnInit {
     if (window.confirm("¿Esta seguro de borrar??")) {
       this.postService.deleteEmployee(id).subscribe((response) => {
         console.log(response);
-        //indice de control frame
+      
         this.post.splice(iControl, 1)
       });
     }
