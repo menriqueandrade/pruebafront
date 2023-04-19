@@ -2,16 +2,16 @@
 <div class="card">
     <div class="card-header">
         <h4>
-            Lista de Post
+            {{ globalTexts.list_of_posts }}
         </h4>
     </div>
     <div class="card-header">
-        <a routerLink="/add-employee" class="btn btn-success"> Agregar Post </a>
+        <a routerLink="/add-employee" class="btn btn-success"> {{ globalTexts.add_post }}</a>
     </div>
     <div *ngIf="loading" class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%">
             <h6>
-                Cargando....
+                {{ globalTexts.Charging }}
             </h6>
 
 
@@ -26,10 +26,10 @@
 
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Body</th>
-                        <th scope="col">Accion</th>
+                        <th scope="col">{{ globalTexts.Id }}</th>
+                        <th scope="col">{{ globalTexts.Title }}</th>
+                        <th scope="col">{{ globalTexts.Body }}</th>
+                        <th scope="col">{{ globalTexts.Action }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,7 @@
                             <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar
                             </button>
                             <button (click)="deleteEmployee(posts.id, iControl)"
-                                class="btn btn-sm btn-danger">Eliminar</button>
+                                class="btn btn-sm btn-danger">{{ globalTexts.Delete }}</button>
 
                     </tr>
 
@@ -54,7 +54,7 @@
         <div class="div">
             <div class="col">
                 <div class="text-center" *ngIf="post?.length > limit">
-                    <button class="btn btn-primary" (click)="showMore()">Ver más</button>
+                    <button class="btn btn-primary" (click)="showMore()">{{ globalTexts.Action }}</button>
                 </div>
             </div>
         </div>

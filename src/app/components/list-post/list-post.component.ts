@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostApiService } from 'src/app/services/post-api.service';
+//import globalTexts
+import  globalTexts  from 'src/app/static/global-text.json';
+
 
 @Component({
   selector: 'app-list-post',
@@ -7,6 +10,7 @@ import { PostApiService } from 'src/app/services/post-api.service';
   styleUrls: ['./list-post.component.css']
 })
 export class ListPostComponent implements OnInit {
+  globalTexts = globalTexts;
   loading = false;
   limit: number = 10;
   startIndex: number = 0;
@@ -29,7 +33,7 @@ export class ListPostComponent implements OnInit {
         this.post = response;
         this.loading = false;
       });
-      //bar charge
+     
       
     },
       700);
@@ -39,7 +43,7 @@ export class ListPostComponent implements OnInit {
     console.log(id);
     console.log(iControl);
     if (window.confirm("¿Esta seguro de borrar??")) {
-      this.postService.deleteEmployee(id).subscribe((response) => {
+      this.postService.deletePost(id).subscribe((response) => {
         console.log(response);
       
         this.post.splice(iControl, 1)

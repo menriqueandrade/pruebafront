@@ -25,7 +25,7 @@ constructor(
   }
   sendData():any{
     
-    this.apiService.AddEmployeeComponent(this.formPostAdd.value).subscribe(
+    this.apiService.AddPost(this.formPostAdd.value).subscribe(
       (json)=>{
         console.log(json);
       }

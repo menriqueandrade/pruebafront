@@ -48,7 +48,7 @@ export class EditPostComponent implements OnInit {
   sendDataEdit(): any {
     // console.log(this.getID);
     console.log(this.formPostEdit.value);
-    this.apiService.editEmployee(this.getID, this.formPostEdit.value).subscribe((respuesta => {
+    this.apiService.editPost(this.getID, this.formPostEdit.value).subscribe((respuesta => {
       console.log(respuesta)
     }));
    this.router.navigateByUrl('list-employee');

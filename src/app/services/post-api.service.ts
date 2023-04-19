@@ -1,36 +1,61 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostApiService {
   API: string = 'https://jsonplaceholder.typicode.com/posts';
-  banderita!: boolean;
-  constructor(private postHttp: HttpClient) { 
-    
+  constructor(private postHttp: HttpClient) {
   }
-  getPosts(){
-    this.banderita = true;
-    return this.postHttp.get(this.API)
-  }
-  AddEmployeeComponent(dataEmployee: any): Observable<any> {
-    return this.postHttp.post(this.API + "?/=", dataEmployee)
+  getPosts() {
+    return this.postHttp.get(this.API).pipe(
+      catchError((error: any) => {
 
-  }
-  deleteEmployee(id: any): Observable<any> {
+        console.error(error);
+        return of('Ocurrió un error al obtener todos los Posts');
 
-    return this.postHttp.get(this.API + "/" + id)
+      })
+    )
   }
-  getPostsIdEdit(id: any): Observable<any>{
-    return this.postHttp.get(this.API+"?/="+id)
+  AddPost(dataEmployee: any): Observable<any> {
+    return this.postHttp.post(this.API + "?/=", dataEmployee).pipe(
+      catchError((error: any) => {
+
+        console.error(error);
+
+        return of('Ocurrió un error al Agregar el post');
+      })
+    )
   }
-  editEmployee(id: any, dataEmployee: any): Observable<any> {
-    this.banderita = false;
-    let edited= this.postHttp.post(this.API + "?/=" + id, dataEmployee)
+  deletePost(id: any): Observable<any> {
+
+    return this.postHttp.get(this.API + "/" + id).pipe(
+      catchError(error => {
+        console.error(error);
+        return of('Ocurrió un error al eliminar el post');
+      })
+    );
+  }
+  getPostsIdEdit(id: any): Observable<any> {
+    return this.postHttp.get(this.API + "?/=" + id).pipe(
+      catchError(error => {
+        console.error(error);
+        return of('Ocurrió un error al editar el post');
+      })
+    );
+  }
+  editPost(id: any, dataEmployee: any): Observable<any> {
+    let edited = this.postHttp.post(this.API + "?/=" + id, dataEmployee)
+      .pipe(
+        catchError(error => {
+          console.log('Error al editar el post:', error);
+          return of('No se pudo editar el post');
+
+        })
+      );
     this.getPosts();
-     return edited;
-
+    return edited;
   }
 }
