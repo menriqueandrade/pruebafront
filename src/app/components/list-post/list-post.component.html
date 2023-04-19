@@ -22,7 +22,8 @@
                         <td scope="row">{{posts.title}}</td>
                         <td scope="row">{{posts.body}}</td>
                         <td>
-                            <button  class="btn btn-sm btn-info"> Editar </button> 
+                            <!-- <a routerLink="/edit-employee/{{posts.id}}" class="btn btn-info"> Editar </a> | -->
+                            <button routerLink="/edit-employee/{{posts.id}}" class="btn btn-sm btn-info"> Editar </button> 
                             <button (click)="deleteEmployee(posts.id, iControl)" class="btn btn-sm btn-danger" >Eliminar</button>
                            
                     </tr>

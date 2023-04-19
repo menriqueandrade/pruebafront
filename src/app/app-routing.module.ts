@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { ListPostComponent } from './components/list-post/list-post.component';
 
 
 
@@ -8,18 +10,14 @@ const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: 'list-employee',
   },
-    
   {
-    path: 'menu', pathMatch: 'full', redirectTo: 'menu',
-
+    path: '', pathMatch: 'full', component: ListPostComponent,
+  },
+ {
+     path: 'edit-employee/:id', component: EditPostComponent
   },
   
-//   {
-//     path: 'edit-employee/:id', component: EditEmployeeComponent
-//   },
-//   {
-//     path: 'js', component: JsComponent
-//   }
+
 ];
 
 @NgModule({
