@@ -8,13 +8,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ModalComponent } from './components/modal/modal.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPostComponent,
     EditPostComponent,
-    AddPostComponent
+    AddPostComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,10 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPaginationModule,
+    NgbModule,
+   
 
     
   ],

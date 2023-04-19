@@ -36,7 +36,7 @@ export class EditPostComponent implements OnInit {
     )
     
     this.formPostEdit = this.form.group({
-      //enviar valores obtenidos al form
+  
       title: [''],
       body: [''],
     });
@@ -49,7 +49,7 @@ export class EditPostComponent implements OnInit {
     // console.log(this.getID);
     console.log(this.formPostEdit.value);
     this.apiService.editPost(this.getID, this.formPostEdit.value).subscribe((respuesta => {
-      console.log(respuesta)
+     
     }));
    this.router.navigateByUrl('list-employee');
   }

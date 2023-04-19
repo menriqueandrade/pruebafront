@@ -1,30 +1,26 @@
+<br>
+
+
+<h4>
+    {{ globalTexts.Add_Post }}
+</h4>
 
 <br>
-<div class="card">
-    <div class="card-header">
-        <h4>
-            {{ globalTexts.Add_Post }}
-        </h4>
+<form ngNativeValidate [formGroup]="formPostAdd" (ngSubmit)="sendData()">
+    <div class="mb-3">
+        <label for="" class="form-label">{{ globalTexts.Title }}</label>
+        <input required type="text" class="form-control" name="" formControlName="title" id="" aria-describedby="helpId"
+            placeholder="Escribe un titulo">
     </div>
-    <div class="card-body">
-        <form ngNativeValidate [formGroup]="formPostAdd" (ngSubmit)="sendData()">
-            <div class="mb-3">
-                <label for="" class="form-label">{{ globalTexts.Title }}</label>
-                <input required type="text" class="form-control" name="" formControlName="title" id="" aria-describedby="helpId"
-                    placeholder="Escribe un titulo">
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">{{ globalTexts.Body }}</label>
-                <input required type="text" class="form-control" name="" formControlName="body" id=""
-                    aria-describedby="emailHelpId" placeholder="Escribe un body">
+    <div class="mb-3">
+        <label for="" class="form-label">{{ globalTexts.Body }}</label>
+        <input required type="text" class="form-control" name="" formControlName="body" id=""
+            aria-describedby="emailHelpId" placeholder="Escribe un body">
 
-            </div>
-
-            <div class="btn-group" role="group" aria-label="Button group name">
-                <button type="submit" class="btn btn-success">{{ globalTexts.Add }}</button>
-                <button type="button" routerLink="/list-employee" class="btn btn-primary">{{ globalTexts.Cancel }}</button>
-            </div>
-        </form>
     </div>
-    
-</div>
+    <div class="btn-group" role="group" aria-label="Button group name">
+        <button type="submit" class="btn btn-success">{{ globalTexts.Add }}</button>
+    </div>
+
+
+</form>
